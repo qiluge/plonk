@@ -131,7 +131,7 @@ The commitment scheme has three steps, as follow:
 * $gen(d)$: this step will generate a structured reference string $(srs)$ in a randomized way. The algorithm randomly chooses $x\in F$ and outputs
 
 $$srs=([1]_1,[x]_1,[x^2]_1,[x^3]_1,.............[x^{d-1}]_1,[1]_2,[x]_2)$$
-where   $[x]_1 =x.g_1$  and   $x_2=x.g_2$.
+where   $[x]_1 =x.g_1$  and   $[x]_2=x.g_2$.
 
 
 * $com(,srs)$: the commitment is computed as follows,

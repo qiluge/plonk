@@ -267,13 +267,13 @@ $h_1= (s_0,s_1,s_2,...,s_{n−1})$ and $h_2= (s_n,s_{n+1},s_{n+2},...,s_{2n−1}
 
 PlonKup is a ZK-SNARK that integrates plookup into PlonK in an efficient way. It introduces a new selector $q_K$ that activates or switches off the lookup gates as follows:
 
-$\begin{equation}
+$$\begin{equation}
 q_{Ki}=
     \begin{cases}
       1 \text{, if the i-th gate is a lookup gate }\\
       0 \text{, otherwise}
     \end{cases}\,
-\end{equation}$
+\end{equation}$$
 
 Lookup gates are thus used only when necessary and the table vector takes dummy values when it's not the case (for $q_{Ki}=0$).
 
@@ -304,10 +304,10 @@ We need to accumulate an expression that runs through the entire difference set 
    
 
   We can write the permutation polynomial as the following:
-  $\begin{align*}
+  $$\begin{align*}
 Z(X\omega) &= Z(X)\frac{(1+\delta)(\epsilon + f(X))(\epsilon(1+\delta) + t(X) + \delta t(X\omega))}
   {(\epsilon(1+\delta) + {h_1}(X) + \delta {h_2}(X)(\epsilon(1+\delta) + {h_2}(X) + \delta {h_1}(X\omega))}
-  \end{align*}$
+  \end{align*}$$
 
 * **Continuous Method**
 
@@ -319,10 +319,10 @@ Z(X\omega) &= Z(X)\frac{(1+\delta)(\epsilon + f(X))(\epsilon(1+\delta) + t(X) + 
   Now the expression $\Delta s_{i} = s_{i} + \delta s_{i+1}$ can be written as ${h_1}_i+\delta {h_1}_{i+1}$, and the expression $\Delta s_{n+i} = s_{n+i} + \delta s_{n+i+1}$ can be written as ${h_2}_i+\delta {h_2}_{i+1}$.
 
   The permutation polynomial is written such way:
-  $\begin{align*}
+  $$\begin{align*}
   Z(X\omega) &= Z(X)\frac{(1+\delta)(\epsilon + f(X))(\epsilon(1+\delta) + t(X) + \delta t(X\omega))}
   {(\epsilon(1+\delta) + {h_1}(X) + \delta {h_1}(X\omega)(\epsilon(1+\delta) + {h_2}(X) + \delta {h_2}(X\omega))}
-  \end{align*}$
+  \end{align*}$$
 
 #### Drawback to the continuous method
 
@@ -348,13 +348,13 @@ $\tau_3(X)=\sum_{i=1}^n\tau_{3,i}L_i(X))$,   $\tau_4(X)=\sum_{i=1}^n\tau_{4,i}L_
 This table will be the preprocessed version of the precomputed table.
 
 
-$\begin{align*}
+$$\begin{align*}
 q_M(X) &=\sum_{i=1}^nq_{Mi}L_i(X),           &  q_L(X) &=\sum_{i=1}^nq_{Li}L_i(X),              &  q_R(X) &=\sum_{i=1}^nq_{Ri}L_i(X)\\
 q_O(X) &= \sum_{i=1}^nq_{Oi}L_i(X)       &  q_C(X) &=\sum_{i=1}^nq_{Ci}L_i(X)  &  q_d(X) &= \sum_{i=1}^nq_{di}L_i(X) \\
 q_K(X) &= \sum_{i=1}^nq_{Ki}L_i(X)  &  S_{\sigma _1}(X) &=\sum_{i=1}^n \sigma^*(i)L_i(X)          &   S_{\sigma _2}(X) &=\sum_{i=1}^n \sigma^*(n+i)L_i(X) \\
  S_{\sigma_3}(X) &=\sum_{i=1}^n \sigma^*(2n+i)L_i(X) &  S_{\sigma_4}(X) &=\sum_{i=1}^n \sigma^*(3n+i)L_i(X)  
 \end{align*}$
-Public input: $x= (w_i)_{i\in[ℓ]}$
+Public input: $x= (w_i)_{i\in[ℓ]}$$
 
 
 **Prover Algorithm**
