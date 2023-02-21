@@ -353,8 +353,8 @@ q_M(X) &=\sum_{i=1}^nq_{Mi}L_i(X),           &  q_L(X) &=\sum_{i=1}^nq_{Li}L_i(X
 q_O(X) &= \sum_{i=1}^nq_{Oi}L_i(X)       &  q_C(X) &=\sum_{i=1}^nq_{Ci}L_i(X)  &  q_d(X) &= \sum_{i=1}^nq_{di}L_i(X) \\
 q_K(X) &= \sum_{i=1}^nq_{Ki}L_i(X)  &  S_{\sigma _1}(X) &=\sum_{i=1}^n \sigma^*(i)L_i(X)          &   S_{\sigma _2}(X) &=\sum_{i=1}^n \sigma^*(n+i)L_i(X) \\
  S_{\sigma_3}(X) &=\sum_{i=1}^n \sigma^*(2n+i)L_i(X) &  S_{\sigma_4}(X) &=\sum_{i=1}^n \sigma^*(3n+i)L_i(X)  
-\end{align*}$
-Public input: $x= (w_i)_{i\in[ℓ]}$$
+\end{align*}$$
+Public input: $x= (w_i)_{i\in[ℓ]}$
 
 
 **Prover Algorithm**
@@ -639,7 +639,7 @@ fn gadget(
 
 ```
 We define three checks that our circuit relies on:
-* **Range checks:** $a<26$ and $b<25$
+* **Range checks:** $a<2^6$ and $b<2^5$
 * **Addition checks:** $a+b=c$
 * **Elliptic curve multiplication** 
  
